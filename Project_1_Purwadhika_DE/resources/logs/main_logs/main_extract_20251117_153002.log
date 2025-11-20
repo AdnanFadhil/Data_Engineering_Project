@@ -1,0 +1,89 @@
+[2025-11-17 08:30:03] [INFO] Processing month: 2025-03
+[2025-11-17 08:30:03] [INFO] Fetching TLC data page...
+[2025-11-17 08:30:04] [INFO] Skipping download (exists): resources/raw/parquet/2025-03/yellow_tripdata_2025-03.parquet
+[2025-11-17 08:30:04] [INFO] Skipping download (exists): resources/raw/parquet/2025-03/green_tripdata_2025-03.parquet
+[2025-11-17 08:30:04] [INFO] === START NYC Taxi ETL: RAW → CLEAN (2025-03) ===
+[2025-11-17 08:30:04] [INFO] Ensured CSV folder exists: resources/raw/csv/yellow/2025-03
+[2025-11-17 08:30:04] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-03
+[2025-11-17 08:30:04] [INFO] Splitting parquet files into daily CSVs...
+[2025-11-17 08:30:04] [INFO] Loading parquet files from resources/raw/parquet/2025-03...
+[2025-11-17 08:30:04] [INFO] Reading resources/raw/parquet/2025-03/green_tripdata_2025-03.parquet ...
+[2025-11-17 08:30:04] [INFO] Loaded 51,539 rows from green_tripdata_2025-03.parquet
+[2025-11-17 08:30:04] [INFO] Reading resources/raw/parquet/2025-03/yellow_tripdata_2025-03.parquet ...
+[2025-11-17 08:30:05] [INFO] Loaded 4,145,257 rows from yellow_tripdata_2025-03.parquet
+[2025-11-17 08:30:05] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-03
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-02-25.csv (2 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-02-27.csv (2 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-02-28.csv (2 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-01.csv (1,425 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-02.csv (1,310 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-03.csv (1,703 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-04.csv (1,787 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-05.csv (1,981 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-06.csv (2,022 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-07.csv (1,780 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-08.csv (1,488 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-09.csv (1,281 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-10.csv (1,616 rows)
+[2025-11-17 08:30:06] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-11.csv (1,737 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-12.csv (1,813 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-13.csv (2,010 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-14.csv (1,829 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-15.csv (1,525 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-16.csv (1,259 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-17.csv (1,704 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-18.csv (1,673 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-19.csv (1,756 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-20.csv (1,933 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-21.csv (1,758 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-22.csv (1,421 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-23.csv (1,275 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-24.csv (1,775 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-25.csv (1,732 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-26.csv (1,853 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-27.csv (1,856 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-28.csv (1,709 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-29.csv (1,608 rows)
+[2025-11-17 08:30:07] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-30.csv (1,217 rows)
+[2025-11-17 08:30:08] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-31.csv (1,692 rows)
+[2025-11-17 08:30:08] [INFO] Saved resources/raw/csv/green/2025-03/2025-04-01.csv (5 rows)
+[2025-11-17 08:30:17] [INFO] Ensured CSV folder exists: resources/raw/csv/yellow/2025-03
+[2025-11-17 08:30:48] [INFO] Saved resources/raw/csv/yellow/2025-03/2007-12-05.csv (1 rows)
+[2025-11-17 08:30:48] [INFO] Saved resources/raw/csv/yellow/2025-03/2009-01-01.csv (1 rows)
+[2025-11-17 08:30:48] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-02-28.csv (29 rows)
+[2025-11-17 08:30:53] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-01.csv (164,225 rows)
+[2025-11-17 08:30:55] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-02.csv (128,857 rows)
+[2025-11-17 08:30:57] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-03.csv (111,319 rows)
+[2025-11-17 08:30:59] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-04.csv (125,887 rows)
+[2025-11-17 08:31:02] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-05.csv (148,102 rows)
+[2025-11-17 08:31:04] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-06.csv (146,400 rows)
+[2025-11-17 08:31:06] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-07.csv (137,877 rows)
+[2025-11-17 08:31:09] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-08.csv (147,698 rows)
+[2025-11-17 08:31:11] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-09.csv (117,402 rows)
+[2025-11-17 08:31:13] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-10.csv (105,213 rows)
+[2025-11-17 08:31:17] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-11.csv (125,981 rows)
+[2025-11-17 08:31:21] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-12.csv (138,868 rows)
+[2025-11-17 08:31:25] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-13.csv (156,893 rows)
+[2025-11-17 08:31:30] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-14.csv (145,063 rows)
+[2025-11-17 08:31:33] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-15.csv (152,910 rows)
+[2025-11-17 08:31:35] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-16.csv (118,920 rows)
+[2025-11-17 08:31:38] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-17.csv (112,592 rows)
+[2025-11-17 08:31:41] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-18.csv (125,058 rows)
+[2025-11-17 08:31:44] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-19.csv (128,292 rows)
+[2025-11-17 08:31:47] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-20.csv (153,239 rows)
+[2025-11-17 08:31:49] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-21.csv (134,581 rows)
+[2025-11-17 08:31:51] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-22.csv (142,104 rows)
+[2025-11-17 08:31:55] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-23.csv (121,065 rows)
+[2025-11-17 08:31:56] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-24.csv (110,918 rows)
+[2025-11-17 08:31:58] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-25.csv (119,934 rows)
+[2025-11-17 08:32:00] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-26.csv (131,537 rows)
+[2025-11-17 08:32:03] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-27.csv (142,834 rows)
+[2025-11-17 08:32:05] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-28.csv (136,362 rows)
+[2025-11-17 08:32:08] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-29.csv (163,096 rows)
+[2025-11-17 08:32:10] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-30.csv (136,781 rows)
+[2025-11-17 08:32:11] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-03-31.csv (115,216 rows)
+[2025-11-17 08:32:11] [INFO] Saved resources/raw/csv/yellow/2025-03/2025-04-01.csv (2 rows)
+[2025-11-17 08:32:12] [INFO] All daily CSVs generated.
+[2025-11-17 08:32:12] [INFO] Uploading CSVs into RAW tables...
+[2025-11-17 08:32:12] [INFO] Uploading 2007-12-05.csv into table "raw"."yellow_tripdata"/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)

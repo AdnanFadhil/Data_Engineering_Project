@@ -1,0 +1,150 @@
+[2025-11-17 09:48:27] [INFO] Processing month: 2025-03
+[2025-11-17 09:48:27] [INFO] Fetching TLC data page...
+[2025-11-17 09:48:28] [INFO] Skipping download (exists): resources/raw/parquet/2025-03/yellow_tripdata_2025-03.parquet
+[2025-11-17 09:48:28] [INFO] Downloading https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2025-03.parquet -> resources/raw/parquet/2025-03/green_tripdata_2025-03.parquet
+[2025-11-17 09:48:30] [INFO] Saved resources/raw/parquet/2025-03/green_tripdata_2025-03.parquet
+[2025-11-17 09:48:30] [INFO] === START NYC Taxi ETL: RAW → CLEAN (2025-03) ===
+[2025-11-17 09:48:30] [INFO] Ensured CSV folder exists: resources/raw/csv/yellow/2025-03
+[2025-11-17 09:48:30] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-03
+[2025-11-17 09:48:30] [INFO] Splitting parquet files into daily CSVs...
+[2025-11-17 09:48:30] [INFO] Loading parquet files from resources/raw/parquet/2025-03...
+[2025-11-17 09:48:30] [INFO] Reading resources/raw/parquet/2025-03/green_tripdata_2025-03.parquet ...
+[2025-11-17 09:48:30] [INFO] Loaded 51,539 rows from green_tripdata_2025-03.parquet
+[2025-11-17 09:48:30] [INFO] Reading resources/raw/parquet/2025-03/yellow_tripdata_2025-03.parquet ...
+[2025-11-17 09:48:30] [ERROR] Failed read parquet file resources/raw/parquet/2025-03/yellow_tripdata_2025-03.parquet — Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+[2025-11-17 09:48:31] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-03
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-01.csv (1,425 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-02.csv (1,310 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-03.csv (1,703 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-04.csv (1,787 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-05.csv (1,981 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-06.csv (2,022 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-07.csv (1,780 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-08.csv (1,488 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-09.csv (1,281 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-10.csv (1,616 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-11.csv (1,737 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-12.csv (1,813 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-13.csv (2,010 rows)
+[2025-11-17 09:48:31] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-14.csv (1,829 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-15.csv (1,525 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-16.csv (1,259 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-17.csv (1,704 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-18.csv (1,673 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-19.csv (1,756 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-20.csv (1,933 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-21.csv (1,758 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-22.csv (1,421 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-23.csv (1,275 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-24.csv (1,775 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-25.csv (1,732 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-26.csv (1,853 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-27.csv (1,856 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-28.csv (1,709 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-29.csv (1,608 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-30.csv (1,217 rows)
+[2025-11-17 09:48:32] [INFO] Saved resources/raw/csv/green/2025-03/2025-03-31.csv (1,692 rows)
+[2025-11-17 09:48:32] [ERROR] No data for yellow — skipping
+[2025-11-17 09:48:32] [INFO] All daily CSVs generated.
+[2025-11-17 09:48:32] [INFO] Uploading CSVs into RAW tables...
+[2025-11-17 09:48:32] [INFO] No CSV files found in resources/raw/csv/yellow/2025-03
+[2025-11-17 09:48:32] [INFO] Uploading 2025-03-01.csv into table green_tripdata
+[2025-11-17 09:48:32] [ERROR] Error inserting 2025-03-01.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:32] [INFO] Uploading 2025-03-02.csv into table green_tripdata
+[2025-11-17 09:48:32] [ERROR] Error inserting 2025-03-02.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:32] [INFO] Uploading 2025-03-03.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-03.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-04.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-04.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-05.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-05.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-06.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-06.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-07.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-07.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-08.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-08.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-09.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-09.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-10.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-10.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-11.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-11.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-12.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-12.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-13.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-13.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-14.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-14.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-15.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-15.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-16.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-16.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-17.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-17.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-18.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-18.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-19.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-19.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-20.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-20.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-21.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-21.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-22.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-22.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-23.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-23.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-24.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-24.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-25.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-25.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-26.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-26.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-27.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-27.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-28.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-28.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-29.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-29.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-30.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-30.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] Uploading 2025-03-31.csv into table green_tripdata
+[2025-11-17 09:48:33] [ERROR] Error inserting 2025-03-31.csv: insert_dataframe() got an unexpected keyword argument 'source_file'
+[2025-11-17 09:48:33] [INFO] ✓ RAW ETL complete.
+[2025-11-17 09:48:33] [INFO] Starting CLEANING process (RAW → CLEAN)...
+[2025-11-17 09:48:33] [INFO] Clean DB connected successfully.
+[2025-11-17 09:48:33] [INFO] === START CLEANING FROM RAW: raw.yellow_tripdata ===
+[2025-11-17 09:48:33] [INFO] Dropping existing clean table & mview...
+[2025-11-17 09:48:34] [INFO] ✓ Old clean table and materialized view removed.
+[2025-11-17 09:48:34] [INFO] Processing & inserting into clean table...
+[2025-11-17 09:48:59] [INFO] ✓ Clean table created with entry_time and load_date.
+[2025-11-17 09:48:59] [INFO] Removing duplicates...
+[2025-11-17 09:49:13] [INFO] ✓ Dedup done.
+[2025-11-17 09:49:13] [INFO] Creating indexes...
+[2025-11-17 09:49:19] [INFO] ✓ Indexes created.
+[2025-11-17 09:49:19] [INFO] Creating materialized view...
+[2025-11-17 09:49:22] [INFO] ✓ Materialized view created.
+[2025-11-17 09:49:22] [INFO] === CLEANING DONE → clean.yellow_tripdata_clean ===
+[2025-11-17 09:49:22] [INFO] Clean DB connected successfully.
+[2025-11-17 09:49:22] [INFO] === START CLEANING FROM RAW: raw.green_tripdata ===
+[2025-11-17 09:49:22] [INFO] Dropping existing clean table & mview...
+[2025-11-17 09:49:22] [INFO] ✓ Old clean table and materialized view removed.
+[2025-11-17 09:49:22] [INFO] Processing & inserting into clean table...
+[2025-11-17 09:49:23] [INFO] ✓ Clean table created with entry_time and load_date.
+[2025-11-17 09:49:23] [INFO] Removing duplicates...
+[2025-11-17 09:49:24] [INFO] ✓ Dedup done.
+[2025-11-17 09:49:24] [INFO] Creating indexes...
+[2025-11-17 09:49:24] [INFO] ✓ Indexes created.
+[2025-11-17 09:49:24] [INFO] Creating materialized view...
+[2025-11-17 09:49:24] [INFO] ✓ Materialized view created.
+[2025-11-17 09:49:24] [INFO] === CLEANING DONE → clean.green_tripdata_clean ===
+[2025-11-17 09:49:24] [INFO] ✓ CLEAN ETL complete.
+[2025-11-17 09:49:24] [INFO] === RAW → CLEAN PIPELINE FINISHED (2025-03) ===
+[2025-11-17 09:49:24] [INFO] === ADD COLUMN month IF NOT EXISTS ===
+[2025-11-17 09:49:24] [INFO] === ADD COLUMN processed_time IF NOT EXISTS ===
+[2025-11-17 09:49:24] [INFO] === POPULATE month COLUMN FROM file_name ===
+[2025-11-17 09:49:25] [INFO] === ADD UNIQUE CONSTRAINT ON file_name ===
+[2025-11-17 09:49:25] [INFO] UNIQUE constraint on file_name already exists
+[2025-11-17 09:49:25] [INFO] === Migration complete ===
+[2025-11-17 09:49:25] [INFO] Marked parquet done: resources/raw/parquet/2025-03/yellow_tripdata_2025-03.parquet
+[2025-11-17 09:49:25] [INFO] Marked parquet done: resources/raw/parquet/2025-03/green_tripdata_2025-03.parquet
