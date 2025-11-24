@@ -7,10 +7,28 @@ from .db_utils import DBUtils
 from .config import Settings
 
 class PartitionManager:
-    """Handle parent/monthly/daily partitions creation."""
-
+    """Handle creation of nested partition tables (parent, monthly, daily) in aggregate schema."""
     @staticmethod
     def create_nested_partition(clean_table, pickup_col, color, next_date):
+        """
+        Pastikan nested partition (parent, monthly, daily) ada di database; jika belum, buat.
+
+        Parameters:
+        - clean_table (str): Nama tabel sumber di schema clean.
+        - pickup_col (str): Nama kolom datetime untuk partition key.
+        - color (str): Warna taxi ('yellow' atau 'green'), digunakan untuk penamaan tabel aggregate.
+        - next_date (datetime.date): Tanggal yang akan diproses (untuk menentukan monthly/daily partition).
+
+        Behavior:
+        - Membuat parent partition table jika belum ada.
+        - Membuat child monthly partition jika belum ada dan attach ke parent.
+        - Membuat child daily partition jika belum ada.
+        - Semua perubahan commit otomatis via SQLAlchemy engine.
+        - Log setiap aksi atau error yang terjadi.
+
+        Returns:
+        - None
+        """
         partition_table = f"{Settings.SCHEMA_AGGREGATE}.{color}_partitioned"
 
         # Parent
@@ -43,7 +61,7 @@ class PartitionManager:
                 conn.execute(text(create_month_sql))
                 Logger.log(f"Child monthly partitioned table {month_child} ensured")
 
-                # attach monthly if not exists
+                # Attach monthly partition jika belum ada
                 check_attach_sql = f"""
                     SELECT 1
                     FROM pg_inherits i

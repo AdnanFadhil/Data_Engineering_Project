@@ -652,3 +652,47 @@ sqlalchemy.exc.ObjectNotExecutableError: Not an executable object: 'CREATE SCHEM
 [2025-11-24 13:59:15] [INFO] ✓ Discord message sent successfully
 [2025-11-24 13:59:16] [INFO] ✓ Discord message sent successfully
 [2025-11-24 13:59:16] [INFO] Aggregate CSV files zipped: update_aggregate_20251124.zip
+[2025-11-24 14:10:30] [INFO] Starting full pipeline...
+[2025-11-24 14:10:30] [INFO] Schema aggregate ensured
+[2025-11-24 14:10:30] [INFO] Processing yellow taxi data...
+[2025-11-24 14:10:32] [INFO] Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 14:10:32] [INFO] Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 14:10:32] [INFO] Child daily partition aggregate.yellow_partitioned_202501_17 ensured
+[2025-11-24 14:10:33] [INFO] Data inserted into aggregate.yellow_partitioned for 2025-01-17
+[2025-11-24 14:10:35] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-17
+[2025-11-24 14:10:37] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-17
+[2025-11-24 14:10:38] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-17
+[2025-11-24 14:10:38] [INFO] Processing green taxi data...
+[2025-11-24 14:10:38] [INFO] Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 14:10:38] [INFO] Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 14:10:38] [INFO] Child daily partition aggregate.green_partitioned_202501_15 ensured
+[2025-11-24 14:10:38] [INFO] Data inserted into aggregate.green_partitioned for 2025-01-15
+[2025-11-24 14:10:38] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-15
+[2025-11-24 14:10:38] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-15
+[2025-11-24 14:10:38] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-15
+[2025-11-24 14:10:38] [INFO] Aggregation done.
+[2025-11-24 14:10:39] [INFO] ✓ Discord message sent successfully
+[2025-11-24 14:10:40] [INFO] ✓ Discord message sent successfully
+[2025-11-24 14:10:41] [INFO] ✓ Discord message sent successfully
+[2025-11-24 14:30:50] [INFO] Starting full pipeline...
+[2025-11-24 14:30:50] [INFO] Schema aggregate ensured
+[2025-11-24 14:30:50] [INFO] Processing yellow taxi data...
+[2025-11-24 14:30:51] [INFO] Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 14:30:51] [INFO] Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 14:30:51] [INFO] Child daily partition aggregate.yellow_partitioned_202501_18 ensured
+[2025-11-24 14:30:53] [INFO] Data inserted into aggregate.yellow_partitioned for 2025-01-18
+[2025-11-24 14:30:55] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-18
+[2025-11-24 14:30:56] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-18
+[2025-11-24 14:30:58] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-18
+[2025-11-24 14:30:58] [INFO] Processing green taxi data...
+[2025-11-24 14:30:59] [INFO] Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 14:30:59] [INFO] Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 14:30:59] [INFO] Child daily partition aggregate.green_partitioned_202501_16 ensured
+[2025-11-24 14:30:59] [INFO] Data inserted into aggregate.green_partitioned for 2025-01-16
+[2025-11-24 14:30:59] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-16
+[2025-11-24 14:30:59] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-16
+[2025-11-24 14:30:59] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-16
+[2025-11-24 14:30:59] [INFO] Aggregation done.
+[2025-11-24 14:31:00] [INFO] ✓ Discord message sent successfully
+[2025-11-24 14:31:01] [INFO] ✓ Discord message sent successfully
+[2025-11-24 14:31:02] [INFO] ✓ Discord message sent successfully
