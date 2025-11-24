@@ -43,3 +43,48 @@
 2025-11-24 12:43:58,195 [INFO] Table berhasil disimpan: result.question9
 2025-11-24 12:43:58,196 [INFO] question9 exported to CSV & saved to table result.question9
 2025-11-24 12:43:58,196 [INFO] Database connection closed.
+2025-11-24 14:33:59,466 [INFO] Creating schema...
+2025-11-24 14:33:59,556 [INFO] Inserting products...
+2025-11-24 14:33:59,594 [INFO] Inserting users...
+2025-11-24 14:33:59,609 [INFO] Inserting orders...
+2025-11-24 14:33:59,674 [INFO] Inserting reviews...
+2025-11-24 14:33:59,746 [INFO] All data inserted successfully.
+2025-11-24 14:33:59,749 [INFO] Database connection closed.
+2025-11-24 14:33:59,751 [INFO] Folder sudah ada: i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_1\src\analysis\sql
+2025-11-24 14:33:59,752 [INFO] Folder sudah ada: output
+2025-11-24 14:34:00,094 [INFO] Schema siap: result
+2025-11-24 14:34:00,257 [INFO] CSV berhasil disimpan: output\question1.csv
+2025-11-24 14:34:01,163 [INFO] Table berhasil disimpan: result.question1
+2025-11-24 14:34:01,165 [INFO] question1 exported to CSV & saved to table result.question1
+2025-11-24 14:34:01,193 [INFO] CSV berhasil disimpan: output\question10.csv
+2025-11-24 14:34:01,414 [INFO] Table berhasil disimpan: result.question10
+2025-11-24 14:34:01,415 [INFO] question10 exported to CSV & saved to table result.question10
+2025-11-24 14:34:01,429 [ERROR] Failed to execute question10_view (SELECT): 'NoneType' object is not iterable
+2025-11-24 14:34:01,460 [INFO] CSV berhasil disimpan: output\question11.csv
+2025-11-24 14:34:01,629 [INFO] Table berhasil disimpan: result.question11
+2025-11-24 14:34:01,631 [INFO] question11 exported to CSV & saved to table result.question11
+2025-11-24 14:34:01,642 [INFO] CSV berhasil disimpan: output\question2.csv
+2025-11-24 14:34:01,755 [INFO] Table berhasil disimpan: result.question2
+2025-11-24 14:34:01,755 [INFO] question2 exported to CSV & saved to table result.question2
+2025-11-24 14:34:01,786 [INFO] CSV berhasil disimpan: output\question3.csv
+2025-11-24 14:34:01,938 [INFO] Table berhasil disimpan: result.question3
+2025-11-24 14:34:01,938 [INFO] question3 exported to CSV & saved to table result.question3
+2025-11-24 14:34:01,961 [INFO] CSV berhasil disimpan: output\question4.csv
+2025-11-24 14:34:02,063 [INFO] Table berhasil disimpan: result.question4
+2025-11-24 14:34:02,063 [INFO] question4 exported to CSV & saved to table result.question4
+2025-11-24 14:34:02,086 [INFO] CSV berhasil disimpan: output\question5.csv
+2025-11-24 14:34:02,208 [INFO] Table berhasil disimpan: result.question5
+2025-11-24 14:34:02,209 [INFO] question5 exported to CSV & saved to table result.question5
+2025-11-24 14:34:02,224 [INFO] CSV berhasil disimpan: output\question6.csv
+2025-11-24 14:34:02,401 [INFO] Table berhasil disimpan: result.question6
+2025-11-24 14:34:02,406 [INFO] question6 exported to CSV & saved to table result.question6
+2025-11-24 14:34:02,415 [INFO] CSV berhasil disimpan: output\question7.csv
+2025-11-24 14:34:02,534 [INFO] Table berhasil disimpan: result.question7
+2025-11-24 14:34:02,535 [INFO] question7 exported to CSV & saved to table result.question7
+2025-11-24 14:34:02,544 [INFO] CSV berhasil disimpan: output\question8.csv
+2025-11-24 14:34:02,608 [INFO] Table berhasil disimpan: result.question8
+2025-11-24 14:34:02,609 [INFO] question8 exported to CSV & saved to table result.question8
+2025-11-24 14:34:02,766 [INFO] CSV berhasil disimpan: output\question9.csv
+2025-11-24 14:34:04,296 [INFO] Table berhasil disimpan: result.question9
+2025-11-24 14:34:04,298 [INFO] question9 exported to CSV & saved to table result.question9
+2025-11-24 14:34:04,298 [INFO] Database connection closed.

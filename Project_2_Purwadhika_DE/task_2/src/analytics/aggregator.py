@@ -3,7 +3,7 @@ from datetime import datetime
 from .partition_manager import PartitionManager
 from .partition_inserter import PartitionInserter
 from .csv_exporter import CSVExporter
-from .zipper import Zipper
+# from .zipper import Zipper
 from .logger import Logger
 from .discord_notifier import DiscordNotifier
 from .db_utils import DBUtils
@@ -159,24 +159,39 @@ class Aggregator:
             success_dates, aggregates = self.aggregate_daily_partitioned()
             Logger.log("Aggregation done.")
 
-            msg_success = (
-                f"ETL daily aggregate yellow: {success_dates.get('yellow','N/A')}, "
-                f"green: {success_dates.get('green','N/A')} berhasil."
+            # Build summary message
+            yellow_date = success_dates.get("yellow", "N/A")
+            green_date = success_dates.get("green", "N/A")
+
+            msg_summary = (
+                f"Pada ETL daily aggregate data taxi US yellow tanggal {yellow_date} "
+                f"dan taxi US green {green_date} berhasil dijalankan.\n"
             )
-            DiscordNotifier.send_message(msg_success)
 
             for color in ["yellow", "green"]:
                 if color in success_dates:
-                    msg = (
-                        f"Hasil agregasi {color} ({success_dates[color]}):\n"
-                        f"Total trips: {self.format_value('total_trips', aggregates[color].get('total_trips'))}\n"
-                        f"Total revenue: {self.format_value('total_revenue', aggregates[color].get('total_revenue'))}\n"
-                        f"Avg fare: {self.format_value('avg_fare', aggregates[color].get('avg_fare'))}\n"
+                    date = success_dates[color]
+                    agg = aggregates[color]
+                    msg_summary += (
+                        f"Hasil agregasi daily taxi US {color} ({date}):\n"
+                        f"Total trips: {self.format_value('total_trips', agg.get('total_trips'))}\n"
+                        f"Total revenue: {self.format_value('total_revenue', agg.get('total_revenue'))}\n"
+                        f"Avg fare: {self.format_value('avg_fare', agg.get('avg_fare'))}\n"
                     )
-                    DiscordNotifier.send_message(msg)
-            zip_file = Zipper.zip_aggregate_files()
+
+            # Print ke console
+            print(msg_summary)
+
+            # Kirim ke Discord
+            DiscordNotifier.send_message(msg_summary)
+
+            # Zip hasil CSV
+            # zip_file = Zipper.zip_aggregate_files()
 
         except Exception:
             err_msg = traceback.format_exc()
             Logger.log(f"ERROR pipeline: {err_msg}", "ERROR")
+            # Print error
+            print(f"Terdapat error:\n{err_msg}")
+            # Kirim ke Discord
             DiscordNotifier.send_message(f"Terdapat error:\n{err_msg[:2000]}")

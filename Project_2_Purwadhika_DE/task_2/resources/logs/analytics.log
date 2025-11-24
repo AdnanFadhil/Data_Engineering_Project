@@ -696,3 +696,23 @@ sqlalchemy.exc.ObjectNotExecutableError: Not an executable object: 'CREATE SCHEM
 [2025-11-24 14:31:00] [INFO] ✓ Discord message sent successfully
 [2025-11-24 14:31:01] [INFO] ✓ Discord message sent successfully
 [2025-11-24 14:31:02] [INFO] ✓ Discord message sent successfully
+[2025-11-24 14:41:45] [INFO] Starting full pipeline...
+[2025-11-24 14:41:45] [INFO] Schema aggregate ensured
+[2025-11-24 14:41:45] [INFO] Processing yellow taxi data...
+[2025-11-24 14:41:47] [INFO] Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 14:41:47] [INFO] Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 14:41:47] [INFO] Child daily partition aggregate.yellow_partitioned_202501_19 ensured
+[2025-11-24 14:41:49] [INFO] Data inserted into aggregate.yellow_partitioned for 2025-01-19
+[2025-11-24 14:41:51] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-19
+[2025-11-24 14:41:53] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-19
+[2025-11-24 14:41:55] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-19
+[2025-11-24 14:41:55] [INFO] Processing green taxi data...
+[2025-11-24 14:41:55] [INFO] Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 14:41:55] [INFO] Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 14:41:55] [INFO] Child daily partition aggregate.green_partitioned_202501_17 ensured
+[2025-11-24 14:41:55] [INFO] Data inserted into aggregate.green_partitioned for 2025-01-17
+[2025-11-24 14:41:55] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-17
+[2025-11-24 14:41:55] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-17
+[2025-11-24 14:41:55] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-17
+[2025-11-24 14:41:55] [INFO] Aggregation done.
+[2025-11-24 14:41:56] [INFO] ✓ Discord message sent successfully

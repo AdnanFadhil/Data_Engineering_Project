@@ -2,7 +2,22 @@
 from .database import DBManager, info, error 
 
 def run_insert_all():
-    """Fungsi untuk membuat schema dan insert semua data"""
+    """
+    Jalankan proses pembuatan schema dan insert semua data awal.
+
+    Behavior:
+    1. Buat schema database (jika belum ada).
+    2. Insert data tabel products (jika masih kosong).
+    3. Insert data tabel users (jika masih kosong).
+    4. Insert data tabel orders (jika masih kosong).
+    5. Insert data tabel reviews (jika masih kosong).
+    6. Commit setiap insert secara otomatis.
+    7. Logging info/error setiap langkah.
+    8. Tutup koneksi database di akhir.
+
+    Returns:
+    - None
+    """
     db = DBManager()
     try:
         # 1. Create table schema

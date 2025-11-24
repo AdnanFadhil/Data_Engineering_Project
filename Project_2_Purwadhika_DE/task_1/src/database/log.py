@@ -4,6 +4,21 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
+"""
+Modul logging untuk aplikasi.
+
+Behavior:
+- Membaca folder log dari environment variable LOG_FOLDER (default: 'log').
+- Pastikan folder log ada, buat jika belum ada.
+- Semua log ditulis ke file 'app.log' di folder log dan ditampilkan ke console.
+- Format log: timestamp [LEVEL] pesan log.
+- Menyediakan shortcut functions: info, warning, error, debug.
+
+Attributes:
+- LOG_FOLDER (str): Folder untuk menyimpan file log.
+- LOG_FILE (Path): Path file log utama ('app.log').
+"""
+
 # Load .env
 load_dotenv()
 

@@ -11,6 +11,35 @@ from .utils import ensure_folder, ensure_schema
 from ..database.log import info, error
 
 class AnalysisExporter:
+    """
+    Menyediakan mekanisme untuk mengeksekusi SQL dari folder tertentu,
+    lalu mengekspor hasilnya ke CSV dan/atau menyimpan ke database.
+
+    Attributes:
+    - sql_folder (Path): Folder tempat file SQL berada.
+    - output_folder (Path): Folder tujuan penyimpanan CSV.
+    - schema (str): Schema database untuk menyimpan tabel hasil export.
+    - conn (psycopg2.connection): Koneksi ke PostgreSQL.
+    - engine (sqlalchemy.Engine): SQLAlchemy engine untuk operasi DB.
+
+    Methods:
+    - run_all():
+        Jalankan semua file SQL dalam urutan tertentu:
+        1. Eksekusi DDL (CREATE/DROP) untuk menyiapkan tabel.
+        2. Eksekusi SELECT → hasil disimpan ke CSV dan/atau DB.
+        
+        Behavior:
+        - Pastikan folder SQL dan output ada.
+        - Pastikan schema DB ada, buat jika belum ada.
+        - Baca semua file SQL di folder sql_folder.
+        - Eksekusi file yang diawali CREATE/DROP sebagai DDL.
+        - Eksekusi file lainnya sebagai SELECT, hasil disimpan ke CSV & tabel.
+        - Logging info/error untuk setiap file SQL.
+        - Tutup koneksi database di akhir proses.
+
+        Returns:
+        - None
+    """
     def __init__(self, sql_folder=None, output_folder=None, schema=None):
         # Folder SQL
         self.sql_folder = Path(sql_folder) if sql_folder else Path(__file__).parent / "sql"
