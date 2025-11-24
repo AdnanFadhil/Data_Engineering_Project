@@ -1,0 +1,154 @@
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+[2025-11-24 10:05:38] [INFO] Clean DB connected successfully.
+[2025-11-24 10:05:38] [INFO] === START CLEANING FROM RAW: raw.yellow_tripdata ===
+[2025-11-24 10:05:38] [INFO] Dropping existing clean table & mview...
+[2025-11-24 10:05:38] [ERROR] Error dropping clean table/mview: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+[2025-11-24 10:05:38] [INFO] Processing & inserting into clean table...
+[2025-11-24 10:05:54] [ERROR] Error creating clean table: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+[2025-11-24 10:05:54] [INFO] Clean DB connected successfully.
+[2025-11-24 10:05:54] [INFO] === START CLEANING FROM RAW: raw.green_tripdata ===
+[2025-11-24 10:05:54] [INFO] Dropping existing clean table & mview...
+[2025-11-24 10:05:54] [ERROR] Error dropping clean table/mview: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+[2025-11-24 10:05:54] [INFO] Processing & inserting into clean table...
+[2025-11-24 10:05:54] [ERROR] Error creating clean table: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+I:\Purwadhika\Project\Project_Caps_2\adnan_capstone1\src\extract_and_load\raw\uploader.py:55: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for chunk in pd.read_csv(path, chunksize=chunksize):
+[2025-11-24 10:21:01] [INFO] Clean DB connected successfully.
+[2025-11-24 10:21:01] [INFO] === START CLEANING FROM RAW: raw.yellow_tripdata ===
+[2025-11-24 10:21:01] [INFO] Dropping existing clean table & mview...
+[2025-11-24 10:21:01] [ERROR] Error dropping clean table/mview: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+[2025-11-24 10:21:01] [INFO] Processing & inserting into clean table...
+[2025-11-24 10:21:31] [ERROR] Error creating clean table: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+[2025-11-24 10:21:31] [INFO] Clean DB connected successfully.
+[2025-11-24 10:21:31] [INFO] === START CLEANING FROM RAW: raw.green_tripdata ===
+[2025-11-24 10:21:31] [INFO] Dropping existing clean table & mview...
+[2025-11-24 10:21:31] [ERROR] Error dropping clean table/mview: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+[2025-11-24 10:21:31] [INFO] Processing & inserting into clean table...
+[2025-11-24 10:21:32] [ERROR] Error creating clean table: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>

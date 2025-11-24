@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "I:\Purwadhika\Project\Project_Caps_1\jcdeah007-capstone1\adnan_capstone1\scheduler.py", line 141, in <module>
+    setup_tasks()
+  File "I:\Purwadhika\Project\Project_Caps_1\jcdeah007-capstone1\adnan_capstone1\scheduler.py", line 134, in setup_tasks
+    create_task(t["name"], t["script"], t["trigger_type"], t["start_time"], PYTHON_PATH)
+  File "I:\Purwadhika\Project\Project_Caps_1\jcdeah007-capstone1\adnan_capstone1\scheduler.py", line 105, in create_task
+    trigger.DaysOfMonth = [1]              # harus list
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sandi\AppData\Roaming\Python\Python312\site-packages\win32com\client\dynamic.py", line 699, in __setattr__
+    raise AttributeError(f"Property '{self._username_}.{attr}' can not be set.")
+AttributeError: Property 'Create.DaysOfMonth' can not be set.

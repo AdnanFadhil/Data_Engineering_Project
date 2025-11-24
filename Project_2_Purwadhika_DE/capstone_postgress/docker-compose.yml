@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  postgres_capstone:
+    image: postgres:13
+    container_name: postgres_capstone
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: project_capstone
+    volumes:
+      - ./pgdata_purwadika:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer_capstone
+    restart: always
+    depends_on:
+      - postgres_capstone
+    ports:
+      - "8080:8080"

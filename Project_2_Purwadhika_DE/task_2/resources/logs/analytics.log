@@ -1,0 +1,158 @@
+[2025-11-24 10:23:12] [INFO] Starting full pipeline...
+[2025-11-24 10:23:12] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 10:23:12] [INFO] Processing yellow taxi data...
+[2025-11-24 10:23:14] [INFO] Aggregating for date: 2024-12-31
+[2025-11-24 10:23:14] [ERROR] Error creating partitioned table aggregate.yellow_partitioned: (psycopg2.errors.SyntaxError) syntax error at or near "::"
+LINE 4: ...          ) PARTITION BY RANGE (tpep_pickup_datetime::date);
+                                                               ^
+
+[SQL: 
+                CREATE TABLE IF NOT EXISTS aggregate.yellow_partitioned (
+                    LIKE clean.yellow_tripdata_clean INCLUDING ALL
+                ) PARTITION BY RANGE (tpep_pickup_datetime::date);
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 10:23:16] [INFO] ✓ Table yellow_total_trips created (new) for date 2024-12-31
+[2025-11-24 10:23:16] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 10:23:17] [INFO] ✓ Table yellow_total_revenue created (new) for date 2024-12-31
+[2025-11-24 10:23:17] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 10:23:19] [INFO] ✓ Table yellow_avg_fare created (new) for date 2024-12-31
+[2025-11-24 10:23:19] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 10:23:19] [INFO] Processing green taxi data...
+[2025-11-24 10:23:19] [INFO] Aggregating for date: 2024-12-25
+[2025-11-24 10:23:19] [ERROR] Error creating partitioned table aggregate.green_partitioned: (psycopg2.errors.SyntaxError) syntax error at or near "::"
+LINE 4: ...          ) PARTITION BY RANGE (lpep_pickup_datetime::date);
+                                                               ^
+
+[SQL: 
+                CREATE TABLE IF NOT EXISTS aggregate.green_partitioned (
+                    LIKE clean.green_tripdata_clean INCLUDING ALL
+                ) PARTITION BY RANGE (lpep_pickup_datetime::date);
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 10:23:19] [INFO] ✓ Table green_total_trips created (new) for date 2024-12-25
+[2025-11-24 10:23:19] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 10:23:19] [INFO] ✓ Table green_total_revenue created (new) for date 2024-12-25
+[2025-11-24 10:23:19] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 10:23:19] [INFO] ✓ Table green_avg_fare created (new) for date 2024-12-25
+[2025-11-24 10:23:19] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 10:23:19] [INFO] Aggregation done.
+[2025-11-24 10:23:20] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:23:21] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:23:22] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:23:22] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 10:23:22] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 10:45:12] [INFO] Starting full pipeline...
+[2025-11-24 10:45:12] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 10:45:12] [INFO] Processing yellow taxi data...
+[2025-11-24 10:45:13] [INFO] Aggregating for date: 2025-01-01
+[2025-11-24 10:45:13] [ERROR] Error creating partitioned table aggregate.yellow_partitioned: (psycopg2.errors.SyntaxError) syntax error at or near "::"
+LINE 4: ...          ) PARTITION BY RANGE (tpep_pickup_datetime::date);
+                                                               ^
+
+[SQL: 
+            CREATE TABLE IF NOT EXISTS aggregate.yellow_partitioned (
+                LIKE clean.yellow_tripdata_clean INCLUDING ALL
+            ) PARTITION BY RANGE (tpep_pickup_datetime::date);
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 10:45:15] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-01
+[2025-11-24 10:45:15] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 10:45:16] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-01
+[2025-11-24 10:45:16] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 10:45:18] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-01
+[2025-11-24 10:45:18] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 10:45:18] [INFO] Processing green taxi data...
+[2025-11-24 10:45:18] [INFO] Aggregating for date: 2024-12-29
+[2025-11-24 10:45:18] [ERROR] Error creating partitioned table aggregate.green_partitioned: (psycopg2.errors.SyntaxError) syntax error at or near "::"
+LINE 4: ...          ) PARTITION BY RANGE (lpep_pickup_datetime::date);
+                                                               ^
+
+[SQL: 
+            CREATE TABLE IF NOT EXISTS aggregate.green_partitioned (
+                LIKE clean.green_tripdata_clean INCLUDING ALL
+            ) PARTITION BY RANGE (lpep_pickup_datetime::date);
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 10:45:18] [INFO] ✓ Table green_total_trips updated (incremental) for date 2024-12-29
+[2025-11-24 10:45:18] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 10:45:18] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2024-12-29
+[2025-11-24 10:45:18] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 10:45:18] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2024-12-29
+[2025-11-24 10:45:18] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 10:45:18] [INFO] Aggregation done.
+[2025-11-24 10:45:19] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:45:20] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:45:21] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:45:21] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 10:45:21] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 10:45:44] [INFO] Starting full pipeline...
+[2025-11-24 10:45:44] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 10:45:44] [INFO] Processing yellow taxi data...
+[2025-11-24 10:45:45] [INFO] Aggregating for date: 2025-01-02
+[2025-11-24 10:45:45] [ERROR] Error creating partitioned table aggregate.yellow_partitioned: (psycopg2.errors.SyntaxError) syntax error at or near "::"
+LINE 4: ...          ) PARTITION BY RANGE (tpep_pickup_datetime::date);
+                                                               ^
+
+[SQL: 
+            CREATE TABLE IF NOT EXISTS aggregate.yellow_partitioned (
+                LIKE clean.yellow_tripdata_clean INCLUDING ALL
+            ) PARTITION BY RANGE (tpep_pickup_datetime::date);
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 10:45:47] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-02
+[2025-11-24 10:45:47] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 10:45:48] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-02
+[2025-11-24 10:45:48] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 10:45:50] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-02
+[2025-11-24 10:45:50] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 10:45:50] [INFO] Processing green taxi data...
+[2025-11-24 10:45:50] [INFO] Aggregating for date: 2024-12-31
+[2025-11-24 10:45:50] [ERROR] Error creating partitioned table aggregate.green_partitioned: (psycopg2.errors.SyntaxError) syntax error at or near "::"
+LINE 4: ...          ) PARTITION BY RANGE (lpep_pickup_datetime::date);
+                                                               ^
+
+[SQL: 
+            CREATE TABLE IF NOT EXISTS aggregate.green_partitioned (
+                LIKE clean.green_tripdata_clean INCLUDING ALL
+            ) PARTITION BY RANGE (lpep_pickup_datetime::date);
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 10:45:50] [INFO] ✓ Table green_total_trips updated (incremental) for date 2024-12-31
+[2025-11-24 10:45:50] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 10:45:50] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2024-12-31
+[2025-11-24 10:45:50] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 10:45:50] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2024-12-31
+[2025-11-24 10:45:50] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 10:45:50] [INFO] Aggregation done.
+[2025-11-24 10:45:51] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:45:52] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:45:53] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:45:53] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 10:45:53] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 10:48:32] [INFO] Starting full pipeline...
+[2025-11-24 10:48:32] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 10:48:32] [INFO] Processing yellow taxi data...
+[2025-11-24 10:48:35] [INFO] Aggregating for date: 2025-01-03
+[2025-11-24 10:48:35] [INFO] Partitioned table aggregate.yellow_partitioned created
+[2025-11-24 10:48:38] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-03
+[2025-11-24 10:48:38] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 10:48:40] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-03
+[2025-11-24 10:48:40] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 10:48:41] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-03
+[2025-11-24 10:48:41] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 10:48:41] [INFO] Processing green taxi data...
+[2025-11-24 10:48:41] [INFO] Aggregating for date: 2025-01-01
+[2025-11-24 10:48:41] [INFO] Partitioned table aggregate.green_partitioned created
+[2025-11-24 10:48:41] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-01
+[2025-11-24 10:48:41] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 10:48:41] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-01
+[2025-11-24 10:48:41] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 10:48:41] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-01
+[2025-11-24 10:48:41] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 10:48:41] [INFO] Aggregation done.
+[2025-11-24 10:48:42] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:48:43] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:48:44] [INFO] ✓ Discord message sent successfully
+[2025-11-24 10:48:44] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 10:48:44] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "I:\Purwadhika\Project\Project_Caps_1\jcdeah007-capstone1\adnan_capstone1\scheduler.py", line 140, in <module>
+    setup_tasks()
+  File "I:\Purwadhika\Project\Project_Caps_1\jcdeah007-capstone1\adnan_capstone1\scheduler.py", line 133, in setup_tasks
+    create_task(t["name"], t["script"], t["trigger_type"], t["start_time"], PYTHON_PATH)
+  File "I:\Purwadhika\Project\Project_Caps_1\jcdeah007-capstone1\adnan_capstone1\scheduler.py", line 104, in create_task
+    trigger = task_def.Triggers.Create(win32com.client.constants.TASK_TRIGGER_MONTHLY)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sandi\AppData\Roaming\Python\Python312\site-packages\win32com\client\__init__.py", line 225, in __getattr__
+    raise AttributeError(a)
+AttributeError: TASK_TRIGGER_MONTHLY

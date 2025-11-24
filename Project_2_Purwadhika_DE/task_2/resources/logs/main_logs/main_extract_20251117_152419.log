@@ -1,0 +1,125 @@
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+[2025-11-17 08:24:20] [INFO] Processing month: 2025-02
+[2025-11-17 08:24:20] [INFO] Fetching TLC data page...
+[2025-11-17 08:24:21] [INFO] Skipping download (exists): resources/raw/parquet/2025-02/yellow_tripdata_2025-02.parquet
+[2025-11-17 08:24:21] [INFO] Skipping download (exists): resources/raw/parquet/2025-02/green_tripdata_2025-02.parquet
+[2025-11-17 08:24:21] [INFO] === START NYC Taxi ETL: RAW → CLEAN (2025-02) ===
+[2025-11-17 08:24:21] [INFO] Ensured CSV folder exists: resources/raw/csv/yellow/2025-02
+[2025-11-17 08:24:21] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-02
+[2025-11-17 08:24:21] [INFO] Splitting parquet files into daily CSVs...
+[2025-11-17 08:24:21] [INFO] Loading parquet files from resources/raw/parquet/2025-02...
+[2025-11-17 08:24:21] [INFO] Reading resources/raw/parquet/2025-02/green_tripdata_2025-02.parquet ...
+[2025-11-17 08:24:21] [INFO] Loaded 46,621 rows from green_tripdata_2025-02.parquet
+[2025-11-17 08:24:21] [INFO] Reading resources/raw/parquet/2025-02/yellow_tripdata_2025-02.parquet ...
+[2025-11-17 08:24:23] [INFO] Loaded 3,577,543 rows from yellow_tripdata_2025-02.parquet
+[2025-11-17 08:24:23] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-02
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-01-31.csv (5 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-01.csv (1,541 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-02.csv (1,321 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-03.csv (1,684 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-04.csv (1,695 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-05.csv (1,834 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-06.csv (1,745 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-07.csv (1,909 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-08.csv (1,450 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-09.csv (1,227 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-10.csv (1,838 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-11.csv (1,832 rows)
+[2025-11-17 08:24:24] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-12.csv (1,788 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-13.csv (1,918 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-14.csv (2,089 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-15.csv (1,312 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-16.csv (1,126 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-17.csv (1,288 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-18.csv (1,736 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-19.csv (1,833 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-20.csv (1,906 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-21.csv (1,810 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-22.csv (1,330 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-23.csv (1,321 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-24.csv (1,660 rows)
+[2025-11-17 08:24:25] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-25.csv (1,815 rows)
+[2025-11-17 08:24:26] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-26.csv (1,838 rows)
+[2025-11-17 08:24:26] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-27.csv (1,956 rows)
+[2025-11-17 08:24:26] [INFO] Saved resources/raw/csv/green/2025-02/2025-02-28.csv (1,800 rows)
+[2025-11-17 08:24:26] [INFO] Saved resources/raw/csv/green/2025-02/2025-03-01.csv (14 rows)
+[2025-11-17 08:24:39] [INFO] Ensured CSV folder exists: resources/raw/csv/yellow/2025-02
+[2025-11-17 08:25:05] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-01-31.csv (30 rows)
+[2025-11-17 08:25:09] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-01.csv (148,649 rows)
+[2025-11-17 08:25:11] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-02.csv (123,646 rows)
+[2025-11-17 08:25:14] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-03.csv (98,476 rows)
+[2025-11-17 08:25:17] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-04.csv (119,863 rows)
+[2025-11-17 08:25:19] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-05.csv (128,369 rows)
+[2025-11-17 08:25:21] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-06.csv (126,082 rows)
+[2025-11-17 08:25:24] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-07.csv (138,099 rows)
+[2025-11-17 08:25:27] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-08.csv (146,049 rows)
+[2025-11-17 08:25:30] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-09.csv (123,431 rows)
+[2025-11-17 08:25:33] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-10.csv (108,569 rows)
+[2025-11-17 08:25:36] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-11.csv (125,526 rows)
+[2025-11-17 08:25:40] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-12.csv (128,920 rows)
+[2025-11-17 08:25:43] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-13.csv (142,760 rows)
+[2025-11-17 08:25:47] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-14.csv (158,575 rows)
+[2025-11-17 08:25:49] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-15.csv (148,473 rows)
+[2025-11-17 08:25:52] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-16.csv (113,726 rows)
+[2025-11-17 08:25:53] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-17.csv (94,574 rows)
+[2025-11-17 08:25:55] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-18.csv (117,355 rows)
+[2025-11-17 08:25:57] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-19.csv (123,679 rows)
+[2025-11-17 08:25:59] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-20.csv (142,246 rows)
+[2025-11-17 08:26:02] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-21.csv (133,980 rows)
+[2025-11-17 08:26:04] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-22.csv (141,862 rows)
+[2025-11-17 08:26:06] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-23.csv (108,970 rows)
+[2025-11-17 08:26:09] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-24.csv (97,348 rows)
+[2025-11-17 08:26:11] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-25.csv (115,804 rows)
+[2025-11-17 08:26:14] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-26.csv (128,974 rows)
+[2025-11-17 08:26:16] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-27.csv (144,052 rows)
+[2025-11-17 08:26:19] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-02-28.csv (149,455 rows)
+[2025-11-17 08:26:19] [INFO] Saved resources/raw/csv/yellow/2025-02/2025-03-01.csv (1 rows)
+[2025-11-17 08:26:19] [INFO] All daily CSVs generated.
+[2025-11-17 08:26:19] [INFO] Uploading CSVs into RAW tables...
+[2025-11-17 08:26:19] [INFO] Uploading 2025-01-31.csv into table "raw"."yellow_tripdata"
+[2025-11-17 08:26:20] [INFO] Skipping 2025-01-31.csv, all rows already inserted based on source_file.
+[2025-11-17 08:26:20] [INFO] Uploading 2025-02-01.csv into table "raw"."yellow_tripdata"
+[2025-11-17 08:26:21] [INFO] Skipping 2025-02-01.csv, all rows already inserted based on source_file.
+[2025-11-17 08:26:21] [INFO] Uploading 2025-02-02.csv into table "raw"."yellow_tripdata"
+[2025-11-17 08:26:22] [INFO] Skipping 2025-02-02.csv, all rows already inserted based on source_file.
+[2025-11-17 08:26:22] [INFO] Uploading 2025-02-03.csv into table "raw"."yellow_tripdata"
+[2025-11-17 08:26:22] [INFO] Skipping 2025-02-03.csv, all rows already inserted based on source_file.
+[2025-11-17 08:26:22] [INFO] Uploading 2025-02-04.csv into table "raw"."yellow_tripdata"
+[2025-11-17 08:26:22] [INFO] Skipping 2025-02-04.csv, all rows already inserted based on source_file.
+[2025-11-17 08:26:22] [INFO] Uploading 2025-02-05.csv into table "raw"."yellow_tripdata"/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)
+/app/src/extract_and_load/raw/uploader.py:40: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path)

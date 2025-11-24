@@ -1,0 +1,134 @@
+[2025-11-17 08:09:59] [INFO] Processing month: 2025-01
+[2025-11-17 08:09:59] [INFO] Fetching TLC data page...
+[2025-11-17 08:10:00] [INFO] Skipping download (exists): resources/raw/parquet/2025-01/yellow_tripdata_2025-01.parquet
+[2025-11-17 08:10:00] [INFO] Skipping download (exists): resources/raw/parquet/2025-01/green_tripdata_2025-01.parquet
+[2025-11-17 08:10:00] [INFO] === START NYC Taxi ETL: RAW → CLEAN (2025-01) ===
+[2025-11-17 08:10:00] [INFO] Ensured CSV folder exists: resources/raw/csv/yellow/2025-01
+[2025-11-17 08:10:00] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-01
+[2025-11-17 08:10:00] [INFO] Splitting parquet files into daily CSVs...
+[2025-11-17 08:10:00] [INFO] Loading parquet files from resources/raw/parquet/2025-01...
+[2025-11-17 08:10:00] [INFO] Reading resources/raw/parquet/2025-01/yellow_tripdata_2025-01.parquet ...
+[2025-11-17 08:10:01] [INFO] Loaded 3,475,226 rows from yellow_tripdata_2025-01.parquet
+[2025-11-17 08:10:01] [INFO] Reading resources/raw/parquet/2025-01/green_tripdata_2025-01.parquet ...
+[2025-11-17 08:10:01] [INFO] Loaded 48,326 rows from green_tripdata_2025-01.parquet
+[2025-11-17 08:10:06] [INFO] Ensured CSV folder exists: resources/raw/csv/yellow/2025-01
+[2025-11-17 08:10:32] [INFO] Saved resources/raw/csv/yellow/2025-01/2024-12-31.csv (21 rows)
+[2025-11-17 08:10:34] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-01.csv (90,188 rows)
+[2025-11-17 08:10:35] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-02.csv (84,832 rows)
+[2025-11-17 08:10:37] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-03.csv (91,250 rows)
+[2025-11-17 08:10:38] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-04.csv (97,804 rows)
+[2025-11-17 08:10:39] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-05.csv (79,624 rows)
+[2025-11-17 08:10:41] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-06.csv (80,126 rows)
+[2025-11-17 08:10:43] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-07.csv (100,643 rows)
+[2025-11-17 08:10:45] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-08.csv (113,897 rows)
+[2025-11-17 08:10:47] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-09.csv (119,285 rows)
+[2025-11-17 08:10:48] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-10.csv (111,494 rows)
+[2025-11-17 08:10:50] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-11.csv (121,966 rows)
+[2025-11-17 08:10:52] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-12.csv (102,510 rows)
+[2025-11-17 08:10:54] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-13.csv (100,492 rows)
+[2025-11-17 08:10:56] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-14.csv (121,735 rows)
+[2025-11-17 08:10:58] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-15.csv (125,359 rows)
+[2025-11-17 08:11:01] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-16.csv (138,711 rows)
+[2025-11-17 08:11:03] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-17.csv (120,994 rows)
+[2025-11-17 08:11:05] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-18.csv (119,812 rows)
+[2025-11-17 08:11:07] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-19.csv (118,232 rows)
+[2025-11-17 08:11:09] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-20.csv (90,094 rows)
+[2025-11-17 08:11:10] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-21.csv (117,592 rows)
+[2025-11-17 08:11:12] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-22.csv (127,259 rows)
+[2025-11-17 08:11:16] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-23.csv (138,136 rows)
+[2025-11-17 08:11:18] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-24.csv (129,546 rows)
+[2025-11-17 08:11:21] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-25.csv (136,816 rows)
+[2025-11-17 08:11:22] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-26.csv (102,228 rows)
+[2025-11-17 08:11:24] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-27.csv (93,060 rows)
+[2025-11-17 08:11:26] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-28.csv (114,002 rows)
+[2025-11-17 08:11:28] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-29.csv (120,672 rows)
+[2025-11-17 08:11:30] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-30.csv (133,266 rows)
+[2025-11-17 08:11:33] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-01-31.csv (133,579 rows)
+[2025-11-17 08:11:33] [INFO] Saved resources/raw/csv/yellow/2025-01/2025-02-01.csv (1 rows)
+[2025-11-17 08:11:34] [INFO] Ensured CSV folder exists: resources/raw/csv/green/2025-01
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2024-12-25.csv (1 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2024-12-29.csv (1 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2024-12-31.csv (4 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-01.csv (1,001 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-02.csv (1,516 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-03.csv (1,525 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-04.csv (1,249 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-05.csv (1,129 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-06.csv (1,541 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-07.csv (1,648 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-08.csv (1,680 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-09.csv (1,868 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-10.csv (1,633 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-11.csv (1,296 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-12.csv (1,143 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-13.csv (1,618 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-14.csv (1,775 rows)
+[2025-11-17 08:11:34] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-15.csv (1,886 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-16.csv (1,909 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-17.csv (1,810 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-18.csv (1,197 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-19.csv (1,113 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-20.csv (1,084 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-21.csv (1,788 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-22.csv (1,812 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-23.csv (1,849 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-24.csv (1,714 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-25.csv (1,336 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-26.csv (1,308 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-27.csv (1,704 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-28.csv (1,771 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-29.csv (1,748 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-30.csv (1,909 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-01-31.csv (1,723 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-02-01.csv (19 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-02-03.csv (6 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-02-04.csv (7 rows)
+[2025-11-17 08:11:35] [INFO] Saved resources/raw/csv/green/2025-01/2025-02-05.csv (5 rows)
+[2025-11-17 08:11:35] [INFO] All daily CSVs generated.
+[2025-11-17 08:11:35] [INFO] Uploading CSVs into RAW tables...
+[2025-11-17 08:11:35] [INFO] Uploading 2025-01-06.csv into table "raw"."yellow_tripdata"
+[2025-11-17 08:11:35] [INFO] Skipping 2025-01-06.csv, all rows already inserted based on source_file.
+[2025-11-17 08:11:35] [ERROR] Error inserting 2025-01-06.csv: [Errno 2] No such file or directory: 'resources/raw/csv/yellow/2025-01/2025-01-06.csv'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/shutil.py", line 847, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: 'resources/raw/csv/yellow/2025-01/2025-01-06.csv' -> 'resources/raw/OLD/yellow/2025-01/2025-01-06.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/src/extract_and_load/raw/uploader.py", line 51, in upload_and_archive
+    shutil.move(path, os.path.join(old_folder, file))
+  File "/usr/local/lib/python3.12/shutil.py", line 867, in move
+    copy_function(src, real_dst)
+  File "/usr/local/lib/python3.12/shutil.py", line 475, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/lib/python3.12/shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'resources/raw/csv/yellow/2025-01/2025-01-06.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/shutil.py", line 847, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: 'resources/raw/csv/yellow/2025-01/2025-01-06.csv' -> 'resources/raw/FAILED/yellow/2025-01/2025-01-06.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/main_extract.py", line 4, in <module>
+    Extractor().run_pipeline()
+  File "/app/src/extract_and_load/etl_pipeline.py", line 29, in run_pipeline
+    uploader.upload_and_archive(cfg, raw_config.engine, month=month_to_process)
+  File "/app/src/extract_and_load/raw/uploader.py", line 78, in upload_and_archive
+    shutil.move(path, os.path.join(failed_folder, file))
+  File "/usr/local/lib/python3.12/shutil.py", line 867, in move
+    copy_function(src, real_dst)
+  File "/usr/local/lib/python3.12/shutil.py", line 475, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/lib/python3.12/shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'resources/raw/csv/yellow/2025-01/2025-01-06.csv'
