@@ -1,16 +1,16 @@
-CREATE TABLE products(
+CREATE TABLE IF NOT EXISTS products(
   id         bigserial PRIMARY KEY,
   created_at timestamp,
   category   text,
   ean        text,
   price      float,
-  quantity   int default(5000),
+  quantity   int default 5000,
   rating     float,
   title      text,
   vendor     text
 );
 
-CREATE TABLE users(
+CREATE TABLE IF NOT EXISTS users(
   id         bigserial PRIMARY KEY,
   created_at timestamp,
   name       text,
@@ -26,7 +26,7 @@ CREATE TABLE users(
   source     text
 );
 
-CREATE TABLE orders(
+CREATE TABLE IF NOT EXISTS orders(
   id         bigserial PRIMARY KEY,
   created_at timestamp,
   user_id    bigint,
@@ -38,7 +38,7 @@ CREATE TABLE orders(
   total      float
 );
 
-CREATE TABLE reviews(
+CREATE TABLE IF NOT EXISTS reviews(
   id         bigserial PRIMARY KEY,
   created_at timestamp,
   reviewer   text,

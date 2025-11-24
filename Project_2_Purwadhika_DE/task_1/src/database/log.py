@@ -1,10 +1,19 @@
 # ./src/database/log.py
 import logging
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 
-# Path log file
-BASE_PATH = Path(__file__).resolve().parent
-LOG_FILE = BASE_PATH / "app.log"
+# Load .env
+load_dotenv()
+
+# Ambil folder log dari .env
+LOG_FOLDER = os.getenv("LOG_FOLDER", "log")
+log_path = Path(LOG_FOLDER)
+log_path.mkdir(parents=True, exist_ok=True)  # pastikan folder ada
+
+# File log
+LOG_FILE = log_path / "app.log"
 
 # Konfigurasi logging
 logging.basicConfig(

@@ -1,5 +1,5 @@
 # ./src/insert.py
-from database import DBManager, info, error  # import dari package database
+from .database import DBManager, info, error 
 
 def run_insert_all():
     """Fungsi untuk membuat schema dan insert semua data"""
