@@ -4,7 +4,7 @@
 -- Tamplikan 10 product teratas.
 SELECT 
 	p.title,
-	count(o.id) AS total_order
+	count(o.total) AS total_order
 FROM 
 	orders o
 JOIN 
