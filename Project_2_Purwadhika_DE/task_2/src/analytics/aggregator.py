@@ -78,22 +78,31 @@ class Aggregator:
         # Aggregate tables
         tables = {
             f"{color}_total_trips": f"""
-                SELECT '{date_str}'::date AS date, COUNT(*) AS total_trips
+                SELECT DISTINCT
+                    '{date_str}'::date AS date,
+                    COUNT(*) OVER () AS total_trips
                 FROM {Settings.SCHEMA_CLEAN}.{clean_table}
-                WHERE {pickup_col}::date = '{date_str}'
+                WHERE {pickup_col}::date = '{date_str}';
             """,
             f"{color}_total_revenue": f"""
-                SELECT '{date_str}'::date AS date, SUM(fare_amount + total_amount) AS total_revenue
-                FROM {Settings.SCHEMA_CLEAN}.{clean_table}
-                WHERE {pickup_col}::date = '{date_str}'
+                WITH daily AS (
+                    SELECT (fare_amount + total_amount) AS full_revenue
+                    FROM {Settings.SCHEMA_CLEAN}.{clean_table}
+                    WHERE {pickup_col}::date = '{date_str}'
+                )
+                SELECT
+                    '{date_str}'::date AS date,
+                    SUM(full_revenue) AS total_revenue
+                FROM daily;
             """,
             f"{color}_avg_fare": f"""
-                SELECT '{date_str}'::date AS date, AVG(fare_amount) AS avg_fare
+                SELECT
+                    '{date_str}'::date AS date,
+                    AVG(fare_amount) AS avg_fare
                 FROM {Settings.SCHEMA_CLEAN}.{clean_table}
-                WHERE {pickup_col}::date = '{date_str}'
+                WHERE {pickup_col}::date = '{date_str}';
             """
         }
-
         aggregates = {}
         for table_name, sql in tables.items():
             try:
@@ -131,7 +140,6 @@ class Aggregator:
         success_dates = {}
         aggregates_all = {}
 
-        # Pastikan schema aggregate ada
         with DBUtils.engine.begin() as conn:
             conn.execute(text(f"CREATE SCHEMA IF NOT EXISTS {Settings.SCHEMA_AGGREGATE}"))
             Logger.log(f"Schema {Settings.SCHEMA_AGGREGATE} ensured")
