@@ -156,3 +156,499 @@ LINE 4: ...          ) PARTITION BY RANGE (lpep_pickup_datetime::date);
 [2025-11-24 10:48:44] [INFO] ✓ Discord message sent successfully
 [2025-11-24 10:48:44] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
 [2025-11-24 10:48:44] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:00:22] [INFO] Starting full pipeline...
+[2025-11-24 13:00:22] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:00:22] [INFO] Processing yellow taxi data...
+[2025-11-24 13:00:24] [INFO] Aggregating for date: 2025-01-07
+[2025-11-24 13:00:24] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:00:24] [ERROR] Error creating partition tables: day is out of range for month
+[2025-11-24 13:00:25] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-07
+[2025-11-24 13:00:25] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:00:27] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-07
+[2025-11-24 13:00:27] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:00:29] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-07
+[2025-11-24 13:00:29] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:00:29] [INFO] Processing green taxi data...
+[2025-11-24 13:00:29] [INFO] Aggregating for date: 2025-01-05
+[2025-11-24 13:00:29] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:00:29] [ERROR] Error creating partition tables: day is out of range for month
+[2025-11-24 13:00:29] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-05
+[2025-11-24 13:00:29] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:00:29] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-05
+[2025-11-24 13:00:29] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:00:29] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-05
+[2025-11-24 13:00:29] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:00:29] [INFO] Aggregation done.
+[2025-11-24 13:00:30] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:00:31] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:00:32] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:00:32] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:00:32] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:03:44] [INFO] Starting full pipeline...
+[2025-11-24 13:03:44] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:03:44] [INFO] Processing yellow taxi data...
+[2025-11-24 13:03:46] [INFO] Aggregating for date: 2025-01-08
+[2025-11-24 13:03:46] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:03:46] [INFO] Creating child partition aggregate.yellow_partitioned_202501 for range 2025-01-01 to 2025-02-01
+[2025-11-24 13:03:46] [INFO] ✓ Child partition aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:03:46] [INFO] Child partition aggregate.yellow_partitioned_202501 exists in DB ✅
+[2025-11-24 13:03:48] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-08
+[2025-11-24 13:03:48] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:03:49] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-08
+[2025-11-24 13:03:49] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:03:51] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-08
+[2025-11-24 13:03:51] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:03:51] [INFO] Processing green taxi data...
+[2025-11-24 13:03:51] [INFO] Aggregating for date: 2025-01-06
+[2025-11-24 13:03:51] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:03:51] [INFO] Creating child partition aggregate.green_partitioned_202501 for range 2025-01-01 to 2025-02-01
+[2025-11-24 13:03:51] [INFO] ✓ Child partition aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:03:51] [INFO] Child partition aggregate.green_partitioned_202501 exists in DB ✅
+[2025-11-24 13:03:52] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-06
+[2025-11-24 13:03:52] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:03:52] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-06
+[2025-11-24 13:03:52] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:03:52] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-06
+[2025-11-24 13:03:52] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:03:52] [INFO] Aggregation done.
+[2025-11-24 13:03:52] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:03:53] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:03:54] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:03:54] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:03:54] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:14:05] [INFO] Starting full pipeline...
+[2025-11-24 13:14:05] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:14:05] [INFO] Processing yellow taxi data...
+[2025-11-24 13:14:07] [INFO] Aggregating for date: 2025-01-09
+[2025-11-24 13:14:07] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:14:07] [INFO] Creating child partition aggregate.yellow_partitioned_202501 for range 2025-01-01 to 2025-02-01
+[2025-11-24 13:14:07] [INFO] ✓ Child partition aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:14:09] [INFO] ✓ Data inserted into partition table aggregate.yellow_partitioned for 2025-01-09
+[2025-11-24 13:14:10] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-09
+[2025-11-24 13:14:10] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:14:13] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-09
+[2025-11-24 13:14:13] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:14:15] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-09
+[2025-11-24 13:14:15] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:14:15] [INFO] Processing green taxi data...
+[2025-11-24 13:14:15] [INFO] Aggregating for date: 2025-01-07
+[2025-11-24 13:14:15] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:14:15] [INFO] Creating child partition aggregate.green_partitioned_202501 for range 2025-01-01 to 2025-02-01
+[2025-11-24 13:14:15] [INFO] ✓ Child partition aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:14:15] [INFO] ✓ Data inserted into partition table aggregate.green_partitioned for 2025-01-07
+[2025-11-24 13:14:15] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-07
+[2025-11-24 13:14:15] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:14:15] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-07
+[2025-11-24 13:14:15] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:14:15] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-07
+[2025-11-24 13:14:15] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:14:15] [INFO] Aggregation done.
+[2025-11-24 13:14:16] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:14:17] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:14:19] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:14:19] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:14:19] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:23:27] [INFO] Starting full pipeline...
+[2025-11-24 13:23:27] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:23:27] [INFO] Processing yellow taxi data...
+[2025-11-24 13:23:30] [INFO] Aggregating for date: 2025-01-10
+[2025-11-24 13:23:30] [ERROR] ERROR pipeline: Traceback (most recent call last):
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 194, in run_pipeline
+    success_dates, aggregates = self.aggregate_daily_partitioned()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 184, in aggregate_daily_partitioned
+    date_fmt, aggregates = self.aggregate_color_daily(cfg)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 131, in aggregate_color_daily
+    self.create_nested_partition(clean_table, pickup_col, color, next_date)
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 65, in create_nested_partition
+    day_start = next_date.date()
+                ^^^^^^^^^^^^^^
+AttributeError: 'datetime.date' object has no attribute 'date'
+
+[2025-11-24 13:23:30] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:27:12] [INFO] Starting full pipeline...
+[2025-11-24 13:27:12] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:27:12] [INFO] Processing yellow taxi data...
+[2025-11-24 13:27:14] [INFO] Aggregating for date: 2025-01-10
+[2025-11-24 13:27:14] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:27:14] [INFO] ✓ Child monthly partition aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:27:14] [ERROR] Error creating nested partition tables: (psycopg2.errors.InvalidObjectDefinition) "yellow_partitioned_202501" is not partitioned
+
+[SQL: 
+                    CREATE TABLE IF NOT EXISTS aggregate.yellow_partitioned_202501_20250110 PARTITION OF aggregate.yellow_partitioned_202501
+                    FOR VALUES FROM ('2025-01-10') TO ('2025-01-11');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:27:15] [INFO] ✓ Data inserted into partition table aggregate.yellow_partitioned for 2025-01-10
+[2025-11-24 13:27:17] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-10
+[2025-11-24 13:27:17] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:27:19] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-10
+[2025-11-24 13:27:19] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:27:21] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-10
+[2025-11-24 13:27:21] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:27:21] [INFO] Processing green taxi data...
+[2025-11-24 13:27:21] [INFO] Aggregating for date: 2025-01-08
+[2025-11-24 13:27:21] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:27:21] [INFO] ✓ Child monthly partition aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:27:21] [ERROR] Error creating nested partition tables: (psycopg2.errors.InvalidObjectDefinition) "green_partitioned_202501" is not partitioned
+
+[SQL: 
+                    CREATE TABLE IF NOT EXISTS aggregate.green_partitioned_202501_20250108 PARTITION OF aggregate.green_partitioned_202501
+                    FOR VALUES FROM ('2025-01-08') TO ('2025-01-09');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:27:21] [INFO] ✓ Data inserted into partition table aggregate.green_partitioned for 2025-01-08
+[2025-11-24 13:27:21] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-08
+[2025-11-24 13:27:21] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:27:21] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-08
+[2025-11-24 13:27:21] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:27:21] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-08
+[2025-11-24 13:27:21] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:27:21] [INFO] Aggregation done.
+[2025-11-24 13:27:22] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:27:23] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:27:24] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:27:24] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:27:24] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:28:40] [INFO] Starting full pipeline...
+[2025-11-24 13:28:40] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:28:40] [INFO] Processing yellow taxi data...
+[2025-11-24 13:28:42] [INFO] Aggregating for date: 2025-01-11
+[2025-11-24 13:28:42] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:28:42] [INFO] ✓ Child monthly partition aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:28:42] [ERROR] Error creating nested partition tables: (psycopg2.errors.InvalidObjectDefinition) "yellow_partitioned_202501" is not partitioned
+
+[SQL: 
+                    CREATE TABLE IF NOT EXISTS aggregate.yellow_partitioned_202501_20250111 PARTITION OF aggregate.yellow_partitioned_202501
+                    FOR VALUES FROM ('2025-01-11') TO ('2025-01-12');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:28:42] [ERROR] Error inserting data into partition table aggregate.yellow_partitioned: (psycopg2.errors.UndefinedTable) relation "aggregate.yellow_partitioned" does not exist
+LINE 2:             INSERT INTO aggregate.yellow_partitioned 
+                                ^
+
+[SQL: 
+            INSERT INTO aggregate.yellow_partitioned 
+            SELECT *
+            FROM clean.yellow_tripdata_clean
+            WHERE tpep_pickup_datetime::date = '2025-01-11'
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:28:45] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-11
+[2025-11-24 13:28:45] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:28:47] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-11
+[2025-11-24 13:28:47] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:28:49] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-11
+[2025-11-24 13:28:49] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:28:49] [INFO] Processing green taxi data...
+[2025-11-24 13:28:50] [INFO] Aggregating for date: 2025-01-09
+[2025-11-24 13:28:50] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:28:50] [INFO] ✓ Child monthly partition aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:28:50] [ERROR] Error creating nested partition tables: (psycopg2.errors.InvalidObjectDefinition) "green_partitioned_202501" is not partitioned
+
+[SQL: 
+                    CREATE TABLE IF NOT EXISTS aggregate.green_partitioned_202501_20250109 PARTITION OF aggregate.green_partitioned_202501
+                    FOR VALUES FROM ('2025-01-09') TO ('2025-01-10');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:28:50] [ERROR] Error inserting data into partition table aggregate.green_partitioned: (psycopg2.errors.UndefinedTable) relation "aggregate.green_partitioned" does not exist
+LINE 2:             INSERT INTO aggregate.green_partitioned 
+                                ^
+
+[SQL: 
+            INSERT INTO aggregate.green_partitioned 
+            SELECT *
+            FROM clean.green_tripdata_clean
+            WHERE lpep_pickup_datetime::date = '2025-01-09'
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:28:50] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-09
+[2025-11-24 13:28:50] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:28:50] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-09
+[2025-11-24 13:28:50] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:28:50] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-09
+[2025-11-24 13:28:50] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:28:50] [INFO] Aggregation done.
+[2025-11-24 13:28:51] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:28:52] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:28:53] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:28:53] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:28:53] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:34:44] [INFO] Starting full pipeline...
+[2025-11-24 13:34:44] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:34:44] [INFO] Processing yellow taxi data...
+[2025-11-24 13:34:47] [INFO] Aggregating for date: 2025-01-12
+[2025-11-24 13:34:47] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:34:47] [INFO] ✓ Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:34:47] [INFO] ✓ Monthly child aggregate.yellow_partitioned_202501 attached to aggregate.yellow_partitioned
+[2025-11-24 13:34:47] [INFO] ✓ Child daily partition aggregate.yellow_partitioned_202501_20250112 ensured
+[2025-11-24 13:34:51] [INFO] ✓ Data inserted into partition table aggregate.yellow_partitioned for 2025-01-12
+[2025-11-24 13:34:54] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-12
+[2025-11-24 13:34:54] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:34:57] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-12
+[2025-11-24 13:34:57] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:35:00] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-12
+[2025-11-24 13:35:00] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:35:00] [INFO] Processing green taxi data...
+[2025-11-24 13:35:00] [INFO] Aggregating for date: 2025-01-10
+[2025-11-24 13:35:00] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:35:00] [INFO] ✓ Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:35:00] [INFO] ✓ Monthly child aggregate.green_partitioned_202501 attached to aggregate.green_partitioned
+[2025-11-24 13:35:00] [INFO] ✓ Child daily partition aggregate.green_partitioned_202501_20250110 ensured
+[2025-11-24 13:35:00] [INFO] ✓ Data inserted into partition table aggregate.green_partitioned for 2025-01-10
+[2025-11-24 13:35:00] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-10
+[2025-11-24 13:35:00] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:35:00] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-10
+[2025-11-24 13:35:00] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:35:00] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-10
+[2025-11-24 13:35:00] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:35:00] [INFO] Aggregation done.
+[2025-11-24 13:35:01] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:35:02] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:35:03] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:35:03] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:35:03] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:35:31] [INFO] Starting full pipeline...
+[2025-11-24 13:35:31] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:35:31] [INFO] Processing yellow taxi data...
+[2025-11-24 13:35:33] [INFO] Aggregating for date: 2025-01-13
+[2025-11-24 13:35:33] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:35:33] [INFO] ✓ Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:35:33] [WARNING] ⚠️ Monthly child aggregate.yellow_partitioned_202501 might already be attached: (psycopg2.errors.WrongObjectType) "yellow_partitioned_202501" is already a partition
+
+[SQL: 
+                    ALTER TABLE aggregate.yellow_partitioned
+                    ATTACH PARTITION aggregate.yellow_partitioned_202501
+                    FOR VALUES FROM ('2025-01-01') TO ('2025-02-01');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:35:33] [ERROR] ❌ Error creating nested partition tables: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                    CREATE TABLE IF NOT EXISTS aggregate.yellow_partitioned_202501_20250113 PARTITION OF aggregate.yellow_partitioned_202501
+                    FOR VALUES FROM ('2025-01-13') TO ('2025-01-14');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+[2025-11-24 13:35:33] [ERROR] Error inserting data into partition table aggregate.yellow_partitioned: (psycopg2.errors.CheckViolation) no partition of relation "yellow_partitioned_202501" found for row
+DETAIL:  Partition key of the failing row contains (tpep_pickup_datetime) = (2025-01-13 22:58:26).
+
+[SQL: 
+            INSERT INTO aggregate.yellow_partitioned 
+            SELECT *
+            FROM clean.yellow_tripdata_clean
+            WHERE tpep_pickup_datetime::date = '2025-01-13'
+        ]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2025-11-24 13:35:36] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-13
+[2025-11-24 13:35:36] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:35:38] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-13
+[2025-11-24 13:35:38] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:35:40] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-13
+[2025-11-24 13:35:40] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:35:40] [INFO] Processing green taxi data...
+[2025-11-24 13:35:40] [INFO] Aggregating for date: 2025-01-11
+[2025-11-24 13:35:40] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:35:40] [INFO] ✓ Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:35:40] [WARNING] ⚠️ Monthly child aggregate.green_partitioned_202501 might already be attached: (psycopg2.errors.WrongObjectType) "green_partitioned_202501" is already a partition
+
+[SQL: 
+                    ALTER TABLE aggregate.green_partitioned
+                    ATTACH PARTITION aggregate.green_partitioned_202501
+                    FOR VALUES FROM ('2025-01-01') TO ('2025-02-01');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2025-11-24 13:35:40] [ERROR] ❌ Error creating nested partition tables: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                    CREATE TABLE IF NOT EXISTS aggregate.green_partitioned_202501_20250111 PARTITION OF aggregate.green_partitioned_202501
+                    FOR VALUES FROM ('2025-01-11') TO ('2025-01-12');
+                ]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+[2025-11-24 13:35:40] [ERROR] Error inserting data into partition table aggregate.green_partitioned: (psycopg2.errors.CheckViolation) no partition of relation "green_partitioned_202501" found for row
+DETAIL:  Partition key of the failing row contains (lpep_pickup_datetime) = (2025-01-11 00:10:35).
+
+[SQL: 
+            INSERT INTO aggregate.green_partitioned 
+            SELECT *
+            FROM clean.green_tripdata_clean
+            WHERE lpep_pickup_datetime::date = '2025-01-11'
+        ]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2025-11-24 13:35:40] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-11
+[2025-11-24 13:35:40] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:35:40] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-11
+[2025-11-24 13:35:40] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:35:40] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-11
+[2025-11-24 13:35:40] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:35:40] [INFO] Aggregation done.
+[2025-11-24 13:35:41] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:35:42] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:35:43] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:35:43] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:35:43] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:39:10] [INFO] Starting full pipeline...
+[2025-11-24 13:39:10] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:39:10] [INFO] Processing yellow taxi data...
+[2025-11-24 13:39:12] [INFO] Aggregating for date: 2025-01-14
+[2025-11-24 13:39:12] [INFO] ✓ Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:39:12] [INFO] ✓ Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:39:12] [WARNING] ⚠️ Monthly child aggregate.yellow_partitioned_202501 already attached, skipped.
+[2025-11-24 13:39:12] [INFO] ✓ Child daily partition aggregate.yellow_partitioned_202501_20250114 ensured
+[2025-11-24 13:39:14] [INFO] ✓ Data inserted into partition table aggregate.yellow_partitioned for 2025-01-14
+[2025-11-24 13:39:16] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-14
+[2025-11-24 13:39:16] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:39:17] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-14
+[2025-11-24 13:39:17] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:39:19] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-14
+[2025-11-24 13:39:19] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:39:19] [INFO] Processing green taxi data...
+[2025-11-24 13:39:19] [INFO] Aggregating for date: 2025-01-12
+[2025-11-24 13:39:19] [INFO] ✓ Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:39:19] [INFO] ✓ Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:39:19] [WARNING] ⚠️ Monthly child aggregate.green_partitioned_202501 already attached, skipped.
+[2025-11-24 13:39:19] [INFO] ✓ Child daily partition aggregate.green_partitioned_202501_20250112 ensured
+[2025-11-24 13:39:19] [INFO] ✓ Data inserted into partition table aggregate.green_partitioned for 2025-01-12
+[2025-11-24 13:39:19] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-12
+[2025-11-24 13:39:19] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:39:19] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-12
+[2025-11-24 13:39:19] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:39:19] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-12
+[2025-11-24 13:39:19] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:39:19] [INFO] Aggregation done.
+[2025-11-24 13:39:20] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:39:21] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:39:22] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:39:22] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:39:22] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:41:33] [INFO] Starting full pipeline...
+[2025-11-24 13:41:33] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:41:33] [INFO] Processing yellow taxi data...
+[2025-11-24 13:41:34] [INFO] Aggregating for date: 2025-01-15
+[2025-11-24 13:41:34] [INFO] Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:41:34] [INFO] ✓ Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:41:34] [WARNING] Monthly child aggregate.yellow_partitioned_202501 already attached, skipped.
+[2025-11-24 13:41:34] [INFO] ✓ Child daily partition aggregate.yellow_partitioned_202501_15 ensured
+[2025-11-24 13:41:36] [INFO] ✓ Data inserted into partition table aggregate.yellow_partitioned for 2025-01-15
+[2025-11-24 13:41:38] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-15
+[2025-11-24 13:41:38] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:41:41] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-15
+[2025-11-24 13:41:41] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:41:43] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-15
+[2025-11-24 13:41:43] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:41:43] [INFO] Processing green taxi data...
+[2025-11-24 13:41:43] [INFO] Aggregating for date: 2025-01-13
+[2025-11-24 13:41:43] [INFO] Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:41:43] [INFO] ✓ Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:41:43] [WARNING] Monthly child aggregate.green_partitioned_202501 already attached, skipped.
+[2025-11-24 13:41:43] [INFO] ✓ Child daily partition aggregate.green_partitioned_202501_13 ensured
+[2025-11-24 13:41:43] [INFO] ✓ Data inserted into partition table aggregate.green_partitioned for 2025-01-13
+[2025-11-24 13:41:43] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-13
+[2025-11-24 13:41:43] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:41:43] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-13
+[2025-11-24 13:41:43] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:41:43] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-13
+[2025-11-24 13:41:43] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:41:43] [INFO] Aggregation done.
+[2025-11-24 13:41:44] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:41:45] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:41:46] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:41:47] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:41:47] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:43:47] [INFO] Starting full pipeline...
+[2025-11-24 13:43:47] [INFO] ✓ Schema aggregate ensured
+[2025-11-24 13:43:47] [INFO] Processing yellow taxi data...
+[2025-11-24 13:43:49] [INFO] Aggregating for date: 2025-01-16
+[2025-11-24 13:43:49] [INFO] Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:43:49] [INFO] ✓ Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:43:49] [WARNING] Monthly child aggregate.yellow_partitioned_202501 already attached, skipped.
+[2025-11-24 13:43:49] [INFO] ✓ Child daily partition aggregate.yellow_partitioned_202501_16 ensured
+[2025-11-24 13:43:50] [INFO] ✓ Data inserted into partition table aggregate.yellow_partitioned for 2025-01-16
+[2025-11-24 13:43:52] [INFO] ✓ Table yellow_total_trips updated (incremental) for date 2025-01-16
+[2025-11-24 13:43:52] [INFO] ✓ Exported yellow_total_trips to CSV at resources/result/aggregate/yellow\yellow_total_trips.csv
+[2025-11-24 13:43:53] [INFO] ✓ Table yellow_total_revenue updated (incremental) for date 2025-01-16
+[2025-11-24 13:43:53] [INFO] ✓ Exported yellow_total_revenue to CSV at resources/result/aggregate/yellow\yellow_total_revenue.csv
+[2025-11-24 13:43:55] [INFO] ✓ Table yellow_avg_fare updated (incremental) for date 2025-01-16
+[2025-11-24 13:43:55] [INFO] ✓ Exported yellow_avg_fare to CSV at resources/result/aggregate/yellow\yellow_avg_fare.csv
+[2025-11-24 13:43:55] [INFO] Processing green taxi data...
+[2025-11-24 13:43:55] [INFO] Aggregating for date: 2025-01-14
+[2025-11-24 13:43:55] [INFO] Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:43:55] [INFO] ✓ Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:43:55] [WARNING] Monthly child aggregate.green_partitioned_202501 already attached, skipped.
+[2025-11-24 13:43:55] [INFO] ✓ Child daily partition aggregate.green_partitioned_202501_14 ensured
+[2025-11-24 13:43:55] [INFO] ✓ Data inserted into partition table aggregate.green_partitioned for 2025-01-14
+[2025-11-24 13:43:55] [INFO] ✓ Table green_total_trips updated (incremental) for date 2025-01-14
+[2025-11-24 13:43:55] [INFO] ✓ Exported green_total_trips to CSV at resources/result/aggregate/green\green_total_trips.csv
+[2025-11-24 13:43:55] [INFO] ✓ Table green_total_revenue updated (incremental) for date 2025-01-14
+[2025-11-24 13:43:55] [INFO] ✓ Exported green_total_revenue to CSV at resources/result/aggregate/green\green_total_revenue.csv
+[2025-11-24 13:43:55] [INFO] ✓ Table green_avg_fare updated (incremental) for date 2025-01-14
+[2025-11-24 13:43:55] [INFO] ✓ Exported green_avg_fare to CSV at resources/result/aggregate/green\green_avg_fare.csv
+[2025-11-24 13:43:55] [INFO] Aggregation done.
+[2025-11-24 13:43:56] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:43:57] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:43:58] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:43:58] [INFO] ✓ Aggregate CSV files zipped into update_aggregate_20251124.zip
+[2025-11-24 13:43:58] [INFO] ✓ Zip file update_aggregate_20251124.zip deleted after sending email
+[2025-11-24 13:51:42] [INFO] Starting full pipeline...
+[2025-11-24 13:51:42] [ERROR] ERROR pipeline: Traceback (most recent call last):
+  File "C:\Users\sandi\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1415, in execute
+    meth = statement._execute_on_connection
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_execute_on_connection'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 102, in run_pipeline
+    success_dates, aggregates = self.aggregate_daily_partitioned()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 88, in aggregate_daily_partitioned
+    conn.execute(f"CREATE SCHEMA IF NOT EXISTS {Settings.SCHEMA_AGGREGATE}")
+  File "C:\Users\sandi\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1417, in execute
+    raise exc.ObjectNotExecutableError(statement) from err
+sqlalchemy.exc.ObjectNotExecutableError: Not an executable object: 'CREATE SCHEMA IF NOT EXISTS aggregate'
+
+[2025-11-24 13:51:43] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:56:20] [INFO] Starting full pipeline...
+[2025-11-24 13:56:20] [ERROR] ERROR pipeline: Traceback (most recent call last):
+  File "C:\Users\sandi\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1415, in execute
+    meth = statement._execute_on_connection
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_execute_on_connection'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 102, in run_pipeline
+    success_dates, aggregates = self.aggregate_daily_partitioned()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "i:\Project\Data Engineering\Project_2_Purwadhika_DE\task_2\src\analytics\aggregator.py", line 88, in aggregate_daily_partitioned
+    conn.execute(f"CREATE SCHEMA IF NOT EXISTS {Settings.SCHEMA_AGGREGATE}")
+  File "C:\Users\sandi\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\engine\base.py", line 1417, in execute
+    raise exc.ObjectNotExecutableError(statement) from err
+sqlalchemy.exc.ObjectNotExecutableError: Not an executable object: 'CREATE SCHEMA IF NOT EXISTS aggregate'
+
+[2025-11-24 13:56:25] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:59:09] [INFO] Starting full pipeline...
+[2025-11-24 13:59:10] [INFO] Schema aggregate ensured
+[2025-11-24 13:59:10] [INFO] Processing yellow taxi data...
+[2025-11-24 13:59:11] [INFO] Parent partition table aggregate.yellow_partitioned ensured
+[2025-11-24 13:59:11] [INFO] Child monthly partitioned table aggregate.yellow_partitioned_202501 ensured
+[2025-11-24 13:59:11] [INFO] Child daily partition aggregate.yellow_partitioned_202501_17 ensured
+[2025-11-24 13:59:12] [INFO] Data inserted into aggregate.yellow_partitioned for 2025-01-17
+[2025-11-24 13:59:12] [ERROR] Error aggregating yellow_total_trips: type object 'DBUtils' has no attribute 'read_sql'
+[2025-11-24 13:59:12] [ERROR] Error aggregating yellow_total_revenue: type object 'DBUtils' has no attribute 'read_sql'
+[2025-11-24 13:59:12] [ERROR] Error aggregating yellow_avg_fare: type object 'DBUtils' has no attribute 'read_sql'
+[2025-11-24 13:59:12] [INFO] Processing green taxi data...
+[2025-11-24 13:59:13] [INFO] Parent partition table aggregate.green_partitioned ensured
+[2025-11-24 13:59:13] [INFO] Child monthly partitioned table aggregate.green_partitioned_202501 ensured
+[2025-11-24 13:59:13] [INFO] Child daily partition aggregate.green_partitioned_202501_15 ensured
+[2025-11-24 13:59:13] [INFO] Data inserted into aggregate.green_partitioned for 2025-01-15
+[2025-11-24 13:59:13] [ERROR] Error aggregating green_total_trips: type object 'DBUtils' has no attribute 'read_sql'
+[2025-11-24 13:59:13] [ERROR] Error aggregating green_total_revenue: type object 'DBUtils' has no attribute 'read_sql'
+[2025-11-24 13:59:13] [ERROR] Error aggregating green_avg_fare: type object 'DBUtils' has no attribute 'read_sql'
+[2025-11-24 13:59:13] [INFO] Aggregation done.
+[2025-11-24 13:59:14] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:59:15] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:59:16] [INFO] ✓ Discord message sent successfully
+[2025-11-24 13:59:16] [INFO] Aggregate CSV files zipped: update_aggregate_20251124.zip

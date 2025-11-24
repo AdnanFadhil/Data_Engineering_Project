@@ -5,11 +5,11 @@ from dotenv import load_dotenv
 load_dotenv()  
 
 class DBConfig:
-    HOST = os.getenv("DB_HOST", "localhost")
-    PORT = os.getenv("DB_PORT", "5432")
-    DBNAME = os.getenv("DB_NAME", "project_capstone")
-    USER = os.getenv("DB_USER", "postgres")
-    PASSWORD = os.getenv("DB_PASSWORD", "postgres")
+    HOST = os.getenv("DB_HOST")
+    PORT = os.getenv("DB_PORT")
+    DBNAME = os.getenv("DB_NAME")
+    USER = os.getenv("DB_USER")
+    PASSWORD = os.getenv("DB_PASSWORD")
 
     @staticmethod
     def get_connection():

@@ -3,6 +3,7 @@ import glob
 import zipfile
 import pandas as pd
 from datetime import datetime
+from calendar import monthrange
 from sqlalchemy import text
 import traceback
 
@@ -10,18 +11,11 @@ from .config import Settings
 from .logger import Logger
 from .db_utils import DBUtils
 from .discord_notifier import DiscordNotifier
-from .emailer import Emailer
+# from .emailer import Emailer
 
 
 class Aggregator:
-    """
-    Kelas untuk melakukan ETL agregasi daily NYC Taxi data:
-    - Mengambil data clean
-    - Menghitung agregasi harian (total trips, total revenue, avg fare)
-    - Menyimpan hasil ke table aggregate & CSV
-    - Membuat zip file hasil agregasi
-    - Mengirim notifikasi via Discord/email
-    """
+    """ETL agregasi daily NYC Taxi data dengan nested partition bulanan & harian."""
 
     def __init__(self):
         os.makedirs(Settings.AGG_YELLOW_DIR, exist_ok=True)
@@ -29,7 +23,6 @@ class Aggregator:
 
     @staticmethod
     def format_value(key, val):
-        """Format angka untuk report/Discord."""
         if val is None or val != val:  # NaN
             return "N/A"
         if key in ["total_trips"]:
@@ -39,7 +32,6 @@ class Aggregator:
         return f"{val:.2f}"
 
     def export_table_to_csv(self, table_name, color):
-        """Export hasil aggregate table ke CSV sesuai warna taxi."""
         dir_path = Settings.AGG_YELLOW_DIR if color == "yellow" else Settings.AGG_GREEN_DIR
         file_path = os.path.join(dir_path, f"{table_name}.csv")
         df = pd.read_sql(f"SELECT * FROM {Settings.SCHEMA_AGGREGATE}.{table_name}", DBUtils.engine)
@@ -50,7 +42,6 @@ class Aggregator:
             Logger.log(f"No data in {table_name} to export.", "WARNING")
 
     def zip_aggregate_files(self):
-        """Zip semua CSV aggregate per color taxi."""
         today_str = datetime.now().strftime("%Y%m%d")
         zip_filename = f"update_aggregate_{today_str}.zip"
         with zipfile.ZipFile(zip_filename, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -60,24 +51,103 @@ class Aggregator:
         Logger.log(f"✓ Aggregate CSV files zipped into {zip_filename}")
         return zip_filename
 
-    def create_partition_table(self, clean_table, pickup_col, color):
-        """Membuat table partitioned jika belum ada."""
+    def create_nested_partition(self, clean_table, pickup_col, color, next_date):
+        """
+        Buat parent partition bulanan & child harian dengan nested partitioning aman.
+        - Parent: partition by month
+        - Child monthly: partition by day
+        - Child daily: actual table
+        """
         partition_table = f"{Settings.SCHEMA_AGGREGATE}.{color}_partitioned"
-        create_sql = f"""
-            CREATE TABLE IF NOT EXISTS {partition_table} (
-                LIKE {Settings.SCHEMA_CLEAN}.{clean_table} INCLUDING ALL
-            ) PARTITION BY RANGE ({pickup_col});
+        
+        # --- Parent monthly partitioned ---
+        try:
+            with DBUtils.engine.begin() as conn:
+                create_parent_sql = f"""
+                    CREATE TABLE IF NOT EXISTS {partition_table} (
+                        LIKE {Settings.SCHEMA_CLEAN}.{clean_table} INCLUDING ALL
+                    ) PARTITION BY RANGE (DATE_TRUNC('month', {pickup_col}));
+                """
+                conn.execute(text(create_parent_sql))
+                Logger.log(f"Parent partition table {partition_table} ensured")
+        except Exception as e:
+            Logger.log(f"Error creating parent partition: {e}", "ERROR")
+            return
+
+        # --- Child monthly (partitioned by day) ---
+        year, month = next_date.year, next_date.month
+        month_start = datetime(year, month, 1).date()
+        month_end = datetime(year, month, monthrange(year, month)[1]).date()
+        month_child = f"{partition_table}_{year}{month:02d}"
+
+        try:
+            with DBUtils.engine.begin() as conn:
+                # Create monthly child table with partition
+                create_month_sql = f"""
+                    CREATE TABLE IF NOT EXISTS {month_child} (
+                        LIKE {Settings.SCHEMA_CLEAN}.{clean_table} INCLUDING ALL
+                    ) PARTITION BY RANGE ({pickup_col});
+                """
+                conn.execute(text(create_month_sql))
+                Logger.log(f"✓ Child monthly partitioned table {month_child} ensured")
+
+                # Cek apakah monthly child sudah attach
+                check_attach_sql = f"""
+                    SELECT 1
+                    FROM pg_inherits i
+                    JOIN pg_class c ON i.inhrelid = c.oid
+                    WHERE i.inhparent = '{partition_table}'::regclass
+                    AND c.relname = '{month_child.split('.')[-1]}';
+                """
+                result = conn.execute(text(check_attach_sql)).fetchone()
+                if not result:
+                    attach_month_sql = f"""
+                        ALTER TABLE {partition_table}
+                        ATTACH PARTITION {month_child}
+                        FOR VALUES FROM ('{month_start}') TO ('{month_end + pd.Timedelta(days=1)}');
+                    """
+                    conn.execute(text(attach_month_sql))
+                    Logger.log(f"✓ Monthly child {month_child} attached to {partition_table}")
+                else:
+                    Logger.log(f"Monthly child {month_child} already attached, skipped.", "WARNING")
+
+        except Exception as e:
+            Logger.log(f"Error creating/attaching monthly child: {e}", "WARNING")
+
+        # --- Child harian ---
+        day_start = next_date
+        day_end = day_start + pd.Timedelta(days=1)
+        day_child = f"{month_child}_{day_start.strftime('%d')}"
+
+        try:
+            with DBUtils.engine.begin() as conn:
+                create_day_sql = f"""
+                    CREATE TABLE IF NOT EXISTS {day_child} PARTITION OF {month_child}
+                    FOR VALUES FROM ('{day_start}') TO ('{day_end}');
+                """
+                conn.execute(text(create_day_sql))
+                Logger.log(f"✓ Child daily partition {day_child} ensured")
+        except Exception as e:
+            Logger.log(f"Error creating daily child partition {day_child}: {e}", "WARNING")
+
+
+    def insert_into_partition(self, clean_table, pickup_col, color, date_str):
+        """Insert data harian ke parent partition table sehingga child terisi otomatis."""
+        partition_table = f"{Settings.SCHEMA_AGGREGATE}.{color}_partitioned"
+        insert_sql = f"""
+            INSERT INTO {partition_table} 
+            SELECT *
+            FROM {Settings.SCHEMA_CLEAN}.{clean_table}
+            WHERE {pickup_col}::date = '{date_str}'
         """
         try:
             with DBUtils.engine.begin() as conn:
-                conn.execute(text(create_sql))
-            Logger.log(f"Partitioned table {partition_table} created")
+                conn.execute(text(insert_sql))
+            Logger.log(f"✓ Data inserted into partition table {partition_table} for {date_str}")
         except Exception as e:
-            Logger.log(f"Error creating partitioned table {partition_table}: {e}", "ERROR")
-
+            Logger.log(f"Error inserting data into partition table {partition_table}: {e}", "ERROR")
 
     def aggregate_color_daily(self, color_cfg):
-        """Agregasi daily untuk satu warna taxi."""
         color = color_cfg["color"]
         clean_table = color_cfg["table"]
         pickup_col = color_cfg["pickup_col"]
@@ -92,21 +162,28 @@ class Aggregator:
         date_fmt = next_date.strftime("%d/%m/%Y")
         Logger.log(f"Aggregating for date: {date_str}")
 
-        self.create_partition_table(clean_table, pickup_col, color)
+        # Pastikan parent + child partition sudah ada
+        self.create_nested_partition(clean_table, pickup_col, color, next_date)
 
-        filter_sql = f"WHERE {pickup_col}::date = '{date_str}'"
+        # Insert data ke parent partition table sehingga child terisi
+        self.insert_into_partition(clean_table, pickup_col, color, date_str)
+
+        # Hitung agregasi
         tables = {
             f"{color}_total_trips": f"""
-                WITH cte AS (SELECT 1 AS dummy FROM {Settings.SCHEMA_CLEAN}.{clean_table} {filter_sql})
-                SELECT '{date_str}'::date AS date, COUNT(*) AS total_trips FROM cte
+                SELECT '{date_str}'::date AS date, COUNT(*) AS total_trips
+                FROM {Settings.SCHEMA_CLEAN}.{clean_table}
+                WHERE {pickup_col}::date = '{date_str}'
             """,
             f"{color}_total_revenue": f"""
-                WITH cte AS (SELECT fare_amount, total_amount FROM {Settings.SCHEMA_CLEAN}.{clean_table} {filter_sql})
-                SELECT '{date_str}'::date AS date, SUM(fare_amount + total_amount) AS total_revenue FROM cte
+                SELECT '{date_str}'::date AS date, SUM(fare_amount + total_amount) AS total_revenue
+                FROM {Settings.SCHEMA_CLEAN}.{clean_table}
+                WHERE {pickup_col}::date = '{date_str}'
             """,
             f"{color}_avg_fare": f"""
-                WITH cte AS (SELECT fare_amount FROM {Settings.SCHEMA_CLEAN}.{clean_table} {filter_sql})
-                SELECT '{date_str}'::date AS date, AVG(fare_amount) AS avg_fare FROM cte
+                SELECT '{date_str}'::date AS date, AVG(fare_amount) AS avg_fare
+                FROM {Settings.SCHEMA_CLEAN}.{clean_table}
+                WHERE {pickup_col}::date = '{date_str}'
             """
         }
 
@@ -120,12 +197,11 @@ class Aggregator:
                     col_name = df.columns[1]
                     aggregates[col_name] = df.iloc[0, 1]
             except Exception as e:
-                Logger.log(f"Error aggregating {table_name} with CTE: {e}", "ERROR")
+                Logger.log(f"Error aggregating {table_name}: {e}", "ERROR")
 
         return date_fmt, aggregates
 
     def aggregate_daily_partitioned(self):
-        """Agregasi daily untuk semua warna taxi (yellow & green)."""
         taxi_configs = [
             {"color": "yellow", "table": "yellow_tripdata_clean",
              "pickup_col": "tpep_pickup_datetime", "dropoff_col": "tpep_dropoff_datetime"},
@@ -148,7 +224,6 @@ class Aggregator:
         return success_dates, aggregates_all
 
     def run_pipeline(self):
-        """Menjalankan full ETL agregasi harian, notifikasi, dan zip file."""
         Logger.log("Starting full pipeline...")
         try:
             success_dates, aggregates = self.aggregate_daily_partitioned()
